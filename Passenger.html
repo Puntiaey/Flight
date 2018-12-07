@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>List of Flights Found</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+.left{
+    float: left;
+    /*border-left: 100px;*/
+    width: 67%;  
+    margin: 1%;
+    /*margin-left: 10%;*/
+    /*background-color: pink;*/
+    margin-left: 5%;
+}
+.left2{
+}
+.right{
+    margin: 1%;
+    float: right;
+    background-color: orange;
+    width: 25%;
+    /*text-align: center;*/
+    border-radius: 10px;
+
+}
+.right2{
+    /*background-color: white;*/
+}
+.mini{
+   background-color: white;
+    border: 1px solid grey;
+    
+}
+/*.mini2{
+   background-color: white;
+    float: left;
+    width: 74%;
+    
+}*/
+.la{
+    font-size: 20px;
+}
+.btn{
+   margin-top: 10%;
+   margin-left: 50%;
+    
+}
+</style>
+</head>
+
+<body>
+ 
+
+  <div class="left">
+    <form name ="Form" onsubmit="" action="Insurance.html">
+        <div class="left 2">
+            <div class="row">
+                <div class="col-sm-3">
+                <label ng-bind="name" for="fromCity">Title </label>
+                <label style="color: red;">*</label><br> <br>
+                <select class="form-control" name="title" id="title">
+                    <option id="mr">Mr.</option>
+                    <option id="ms">Ms.</option>
+                    <option id="mrs">Mrs.</option>
+                </select>
+            </div>
+
+            <div class="col-sm-3">
+                 <label for="firstname">first name </label>
+                 <label style="color: red;">*</label><br><br>
+                <input type="text" class="form-control" name="f_name" id="first_name" 
+                placeholder = "Your first name." oninput="return showOption('first_name' , 'returning')" ng-model="toCity">
+            </div>
+
+            <div class="col-sm-3">
+                <label for="lastname">last name </label>
+                <label style="color: red;">*</label>
+                <br><br>
+                <input type="text" class="form-control" name="l_name" id="last_name" 
+                placeholder = "Your last name." oninput="return showOption('last_name' , 'returning')" ng-model="toCity">
+            </div>
+
+
+            <div class="col-sm-3">
+                <label for="birthdate">Birth Date </label>
+                <label style="color: red;">*</label><br><br>
+                <select class="form-control" name="date" id="date">
+                    <option id="1">1</option><option id="2">2</option>
+                    <option id="3">3</option><option id="4">4</option>
+                    <option id="5">5</option><option id="6">6</option>
+                    <option id="7">7</option><option id="8">8</option>
+                    <option id="9">9</option><option id="10">10</option>
+                    <option id="11">11</option><option id="12">12</option>
+                    <option id="13">13</option><option id="14">14</option>
+                    <option id="15">15</option><option id="16">16</option>
+                    <option id="17">17</option><option id="18">18</option>
+                    <option id="19">19</option><option id="20">20</option>
+                    <option id="21">21</option><option id="22">22</option>
+                    <option id="23">23</option><option id="24">24</option>
+                    <option id="25">25</option><option id="26">26</option>
+                    <option id="27">27</option><option id="28">28</option>
+                    <option id="29">29</option><option id="30">30</option>
+                    <option id="31">31</option>
+                </select>
+                <select class="form-control" name="month" id="month">
+                    <option id="m1">1</option><option id="m2">2</option>
+                    <option id="m3">3</option><option id="m4">4</option>
+                    <option id="m5">5</option><option id="m6">6</option>
+                    <option id="m7">7</option><option id="m8">8</option>
+                    <option id="m9">9</option><option id="m10">10</option>
+                    <option id="m11">11</option><option id="m12">12</option>
+
+                </select>
+                <select class="form-control" name="year" id="year">
+                    <option id="y1">1970</option><option id="y2">1971</option>
+                    <option id="y3">1972</option><option id="y4">1973</option>
+                    <option id="y5">1974</option>
+            
+                </select>
+        </div>
+    
+      </div><br>
+
+      <div class="row">
+        <div class="col-sm-3">
+          <label for="departing">Passport NO. </label>
+          <label style="color: red;">*</label><br>
+          <input type="text" class="form-control" name="pass" id="pass" 
+          placeholder = "Your Passport." oninput="return showOption('pass' , 'returning')" ng-model="pass"><br>
+        </div>
+        <div class="col-sm-3">
+          <label for="country">Country </label>
+          <label style="color: red;">*</label><br>
+          <select class="form-control" name="country" id="country">
+            <option id="BKK">Suvarnabumi (BKK)</option>
+            <option id="DMK">Donmueng (DMK)</option>
+            <option id="CDG">Charles de Gaulle (CDG)</option>
+          </select>
+        </div>
+        <div class="col-sm-5">
+                <label for="birthdate">Passport Expiration Date </label>
+                <label style="color: red;">*</label><br><br>
+                <select class="form-control" name="date" id="date">
+                    <option id="1p">1</option><option id="2p">2</option>
+                    <option id="3p">3</option><option id="4p">4</option>
+                    <option id="5p">5</option><option id="6p">6</option>
+                    <option id="7p">7</option><option id="8p">8</option>
+                    <option id="9p">9</option><option id="10p">10</option>
+                    <option id="11p">11</option><option id="12p">12</option>
+                    <option id="13p">13</option><option id="14p">14</option>
+                    <option id="15p">15</option><option id="16p">16</option>
+                    <option id="17p">17</option><option id="18p">18</option>
+                    <option id="19p">19</option><option id="20p">20</option>
+                    <option id="21p">21</option><option id="22p">22</option>
+                    <option id="23p">23</option><option id="24p">24</option>
+                    <option id="25p">25</option><option id="26p">26</option>
+                    <option id="27p">27</option><option id="28p">28</option>
+                    <option id="29p">29</option><option id="30p">30</option>
+                    <option id="31p">31</option>
+                </select>
+                <select class="form-control" name="month" id="month">
+                    <option id="m1p">1</option><option id="m2p">2</option>
+                    <option id="m3p">3</option><option id="m4p">4</option>
+                    <option id="m5p">5</option><option id="m6p">6</option>
+                    <option id="m7p">7</option><option id="m8p">8</option>
+                    <option id="m9p">9</option><option id="m10p">10</option>
+                    <option id="m11p">11</option><option id="m12p">12</option>
+
+                </select>
+                <select class="form-control" name="year" id="year">
+                    <option id="y1p">2018</option><option id="y2p">2019</option>
+                    <option id="y3p">2020</option><option id="y4p">2021</option>
+                    <option id="y5p">2022</option>
+            
+                </select>
+        </div>
+    
+      </div>
+      </div><br><div class="btn"><button class="btn btn-default" style="color:white; background-color: green;width: 150px;" id="searchButton" 
+        ng-click="submit()" > Next</button></div>
+        </div>
+
+    
+        
+    </form>
+    
+  </div>
+
+
+
+  <div class="right">
+    <h3>Payment Information</h3>
+    <div class="right2">
+        <div class="mini">
+        <label class="la">Flight :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label class="la">25,670 บาท</label>
+        </div>
+
+        <div class="mini">
+        <label class="la">Tax :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label class="la">1,000 บาท</label>
+        </div>
+
+        <div class="mini">
+        <label class="la">Service Fee :&nbsp;</label>
+                <label class="la">0 บาท</label>
+        </div>
+
+        <div class="mini">
+        <label class="la">Discount :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label class="la">0 บาท</label>
+        </div>
+         
+        <div class="mini">
+        <label class="la">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total :</label>
+                <label class="la">26,670 บาท</label>
+        </div>          
+    
+    
+  </div>
+  </div>
+      
+  </div>
+    </body>
+</html>
