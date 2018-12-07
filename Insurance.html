@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>List of Flights Found</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+.left{
+    float: left;
+    /*border-left: 100px;*/
+    width: 60%;  
+    margin: 1%;
+    /*margin-left: 10%;*/
+    background-color: lightblue;
+    margin-left: 5%;
+}
+.left2{
+  background-color: white;
+  width: 96%;
+  /*float: center;*/
+  margin-left: 2% 
+  
+}
+.right{
+    margin: 1%;
+    float: right;
+    background-color: orange;
+    width: 25%;
+    /*text-align: center;*/
+    border-radius: 10px;
+
+}
+.right2{
+    /*background-color: white;*/
+}
+.mini{
+   background-color: white;
+    border: 1px solid grey;
+    
+}
+
+
+.la{
+    font-size: 20px;
+}
+.btn{
+   margin-left: 30%;
+    
+}
+</style>
+</head>
+
+<body>
+ 
+
+  <div class="left">
+    <form name ="Form" onsubmit="" action="flight.html">
+      <h3>ประกันภัยระหว่างเดินทาง</h3>
+
+       <div class="left2">
+            <input type="checkbox" id="myCheck_i"  onclick="myFunction()">          
+              <label for="myCheck_i2" style="color: red;">ประกันอุบัติเหตุและสุขภาพ ระหว่างเดินทาง(ราคา 1,300 บาท)</label>
+              </div>
+              <div class="left2">
+               <input type="checkbox" id="myCheck_t"  onclick="myFunction2()">          
+              <label for="myCheck_t2" style="color: red;">ประกันกระเป๋าเดินทางหาย หรือ ล่าช้า(ราคา 350 บาท)</label>
+              </div>
+              <br>
+                        
+                
+        <div class="btn"><button class="btn btn-default" style="color:white; background-color: green;width: 150px;" id="conButton" 
+        ng-click="submit()" > Next</button></div>
+        </div>
+        <br>
+        </div>
+
+    
+        
+    </form>
+    
+  </div>
+
+
+
+  <div class="right">
+    <h3>Payment Information</h3>
+    <div class="right2">
+        <div class="mini">
+        <label class="la">Flight :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+            <label class="la" id="flightPrice">25,670 บาท</label>
+        </div>
+
+        <div class="mini">
+        <label class="la">Tax :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <label class="la">1,000 บาท</label>
+        </div>
+        <div class="mini">
+        <label class="la">Service Fee :&nbsp;</label>
+                <label class="la">0 บาท</label>
+          <br>
+          <label class="la"style="color: red;">Travel Insurance :&nbsp;</label>
+          <label id="text" style="color: red; display:none">1,300 บาท</label>
+          <br>
+          <label class="la" style="color: red;">Baggage Insurance :&nbsp;</label>
+                <label id="text2" style="color: red; display:none">500 บาท</label>
+        </div>
+
+        <div class="mini">
+        <label class="la">Discount :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <label class="la">0 บาท</label>
+        </div>
+         
+        <div class="mini">
+        <label class="la">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total :</label>
+        <label id="total" style="color: red; display:none">27,970 บาท</label>
+        <label id="total2" style="color: red; display:none">27,020 บาท</label>
+        <label id="total3" style="color: red; display:none">28,320 บาท</label>
+        </div>          
+  </div>
+  </div>
+      
+  </div>
+
+<script>
+function myFunction() {
+    var checkBox = document.getElementById("myCheck_i");
+    var text = document.getElementById("text");
+    var total = document.getElementById("total");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+        total.style.display = "block";
+    } else {
+       text.style.display = "none";
+       total.style.display = "none";
+    }
+}
+</script>
+<script>
+function myFunction2() {
+    var checkBox = document.getElementById("myCheck_t");
+    var text = document.getElementById("text2");
+    var total = document.getElementById("total2");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+        total.style.display = "block";
+    } else {
+       text.style.display = "none";
+       total.style.display = "none";
+    }
+}
+</script>
+
+
+    </body>
+</html>
