@@ -62,19 +62,43 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr >
-                                        <td><label id="ticketPrice">f.price</label></td>
-                                        <td><label id="airline1">f.airline</label></td>
-                                        <td><label id="fromAirport1">f.fromAirport</label></td>
-                                        <td><label id="toAirport1">f.toAirport</label></td>
-                                        <td><label id="travelTime1">f.NoStops(f.travelTime)</label>
-                                            <a href="#">details</a>
-                                            <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
-                                            <a href="#"><span class="glyphicon glyphicon-print"></span></a>
-                                        </td>
-                                    </tr>
+                                <td>
+                                 
+
+                            <script>
+                            $(document).ready(function(){
+                 $.getJSON("https://api.myjson.com/bins/1gq95a", function(result){
+                    $.each(result, function(i, field){
+                    $("tr").append();
+                    $("td").append(field.price);
+                    $("td").append(field.airline);
+                    $("td").append(field.Takeoff);
+                    $("td").append(field.Landing);
+                    $("td").append(field.Stops +"(" +field.Duration+")");
+                    $("/td").append();
+                    
+                    });
+                });
+    
+                });
+                        </script>
+                                <a data-toggle="collapse" data-target="#demo">details</a>
+                                <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+                                <a href="#"><span class="glyphicon glyphicon-print"></span></a>
+                                    
                                 </tbody>
                             </table>
+
+
+<div id="demo" class="collapse">
+               <form name ="Form" onsubmit="" action="Passenger.html">
+                
+                    <h2>Take of: field.price</h2>
+                    <h2>Landing: </h2>
+                    <button class="btn btn-default" style="color:white; background-color: lightblue;width: 150px;" id="selectButton" 
+        ng-click="submit()" > Select</button>
+                    </form>
+                </div>
                         </div>    
                     </div>
                 </div>            
@@ -86,8 +110,9 @@
         </div>
         <div class="text-center">
             <ul class="pagination">
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
+                
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
                 <li><a href="#">3</a></li>    
                 <li><a href="#">4</a></li>
                 <li><a href="#">5</a></li>
