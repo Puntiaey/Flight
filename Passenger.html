@@ -28,7 +28,6 @@
     float: right;
     background-color: orange;
     width: 25%;
-    /*text-align: center;*/
     border-radius: 10px;
 
 }
@@ -40,13 +39,14 @@
     border: 1px solid grey;
     
 }
-/*.mini2{
-   background-color: white;
-    float: left;
-    width: 74%;
-    
-}*/
+
 .la{
+    font-size: 20px;
+}
+.la_Flight{
+    font-size: 20px;
+}
+.la_Tax{
     font-size: 20px;
 }
 .btn{
@@ -58,9 +58,7 @@
 </head>
 
 <body>
- 
-
-  <div class="left">
+   <div class="left">
     <form name ="Form" onsubmit="" action="Insurance.html">
         <div class="left 2">
             <div class="row">
@@ -202,12 +200,12 @@
     <div class="right2">
         <div class="mini">
         <label class="la">Flight :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <label class="la">25,670 บาท</label>
+                <label class="la_Flight" value=25,670>25,670 บาท</label>
         </div>
 
         <div class="mini">
         <label class="la">Tax :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                <label class="la">1,000 บาท</label>
+                <label class="la_Tax" value=1,000>1,000 บาท</label>
         </div>
 
         <div class="mini">
@@ -222,7 +220,7 @@
          
         <div class="mini">
         <label class="la">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total :</label>
-                <label class="la">26,670 บาท</label>
+               <label class="la"> 26,670 บาท</label>
         </div>          
     
     
